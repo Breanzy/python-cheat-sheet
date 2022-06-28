@@ -1,0 +1,163 @@
+Python is a kewl programming language that has no parenthesis at the end of the code. Its commonly used for machine learning or web development
+
+
+Kewl Python things
+###################################################################################################################################################
+
+importing function
+
+from (function) import *
+
+function types:
+math - for math things
+ 
+Variables & Functions
+###################################################################################################################################################
+
+Python is different from other programming languages, in which their variables are automatically assumed, so you don't have to assign
+a data type before a variable, like Java or C/C++. Variables with set data types also has functions here, kewl
+
+string = 'Breanzy'            <= variable assumed as String  
+                              NOTE: Notice how, unlike other languages as well, Strings are enclosed with '' instead of "".
+
+String functions:
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+(notice their functions dont follow programming etiqquete like other languges. isupper() instead of isUpper. kinda throws me off)
+
+string.upper()                                  -converts string variable to all uppercase
+string.isupper()                                -returns boolean condition if everything is uppercase           
+string.lower()                                  -converts string variable to all lowercase
+string.islower()                                -returns boolean condition if everything is lowercase
+string.index('(letter)')                        -returns the index number where the mentioned letter is found in the string
+string.replace('(letter/s)', '(new letter/s)')      -replaces a letter in a string variable to a new letter
+
+Note: you can also combine these functions in combo.
+string.upper().isupper()    makes all strings into uppercase, then returns true since all of them are now uppercase
+
+
+number = 1                    <= variable assumed as integer
+number = 20 % 3               <= int variable, and its value is the remainder of 20/3 (or 20 modulo 3), which is 2
+
+
+Basic functions
+###################################################################################################################################################
+
+#aye                                        - single line comment in Python (#)
+
+'''
+aye                                         -multiple line comment in Python ('''    ''')
+'''
+
+print('text')                               - prints something in console (text)
+print('string', 1)                          - prints (string 1). Notice how string and 1 has a space between them.
+
+stringExample = 'test'
+print(stringExample + 'test again\n')       -prints (testtest again(new line)). stringExample variable is concatenated with string test again. 
+                                            Notice this time, there are no spaces. \n is just new line (or Enter, next line)
+intExample = 2
+print(intExample + 1)                       -prints (3)
+
+var = 'string'
+len(var)                                    -returns value of the number of characters in a string. ONLY on string, doesnt work on integers. (6)
+
+var = 55
+str(var)                                    -converts integer to string (returns STRING 55)
+
+var = -5
+abs(var)                                    -returns absolute value of var (5)
+
+max(1, 2, 3 ,4 ,5)                          -returns only the maximum value (5)
+min(1,2, 3, 4, 5)                           -returns only the minimum value (1)
+
+var = 3.6                                   -double or whatever lmao
+round(var)                                  -returns a rounded number (4)
+
+var = 2
+bin(var)                                    -converts a number into a binary number format (10 is binary for 2)
+                                             (output is 0b10. The 0b is the indicator that the number is now a binary format)
+
+
+with math import:
+print(sqrt(100))                            -prints square root. 
+
+string = input('Input:' )                   -puts value in name from user input, with a text promt 'Input '
+integer = int(input('Integer Input: '))     -user input w/ prompt 'Integer Input: ', but the value is typecasted (converted) into an integer data type
+
+var = ['var1', 'var2', 'var3']              -assigns a list of string in var
+print(var[0])                               -prints first element of list ('var1')
+print(var[0][1])                            -prints second letter of first element in lsit (a)
+print(var[1:])                              -prints every element of the list starting from second element ('var2', 'var3')
+print(var[1:2])                             -same function before, only it stops before the third element. ('var2')
+print(type(var))                            -prints what kind of data type var is ('list')
+print(var[-1])                              -prints the last element of the list ('var3')
+print(len(var))                             -prints size of list (3)
+
+var2 = list((1, 2, 3))                      -creates list similar to last example, but this time using the list constructor notice the double braces.
+var2.append('Hello')                        -adds new element at the end of the var2 list. (now it is 1, 2, 3, Hello).              
+var2.extend(var)                            -adds var2 to var1 in list (now it is 1, 2, 3, var1, var2, var3)
+var2.insert(0, Lmao)                        -adds Lmao at the First element (0) of the var2 list (now its Lmao, 1, 2, 3)
+var2.remove(3)                              -removes element in var2 list with value 3. (now its 1, 2)
+var2.index(3)                               -returns the index number of element in var2 list that contains the value 3 (2)
+var2.count(3)                               -returns the number of elements with a value 3 that are in the var2 list (only 1)
+var2.sort()                                 -sorts the list in ascending order (1, 2, 3 is already sorted, so bad example here lmao)
+var2.reverse()                              -reverses the order of list (3, 2, 1)
+
+var3.copy(var2)                             -copies all values in var2 to var3 (1, 2, 3)
+var3.clear()                                -clears the var3 list
+del var3                                    -similar function to .clear(), but delete straight up DELETES the var3 list, not just clear its value
+
+var3.pop()                                  -removes the last element of the list (3) (now it is 1, 2)
+var3.pop(1)                                 -removes the element of the list in index number 1 (2) (now it is 1, 3)
+del var3[1]                                 -similar function to pop(1)    
+
+var4 = (1, 2, 3)                            -creates a tuple. Notice the round braces. Tuples are immutable (cannot add remove or edit elements)
+
+var5 = {1 : 'one', 2 : 'two', 3 : 'three'}  -creates at dictionary. 1, 2, 3 are keys, and 'one', 'two', 'three' are values.
+                                            NOTE: dictionaries CANNOT have similar keys. Meaning you cannot put two 1's or 2's.
+
+
+
+def func1(a):                               -creates a function. Notice no curly braces. The only thing that makes a code part of a function
+    print(a)                                 is the fact that the code is indented. If its not, then its no longer part of the function.
+                                             if a code is indented BEFORE any functions are called, python throws errors. Yuck. Java dont do that eee
+
+func1('aye');                               -calls fun1 function (prints aye)
+
+func1(a*):                                  -creates a function with a list parameter.
+    print(a)                                -prints the list a. All list functions apply here.
+
+func1(a):
+    return a                                -function that returns value with return command
+
+if 2 + 2 == 4:                              -if function in python. executes code within it when condition is true. if you want
+    print('ye its tru')                      you can put braces (2 + 2 == 4)
+
+elif (1 + 1 != 2):
+    print('you wont even print this')
+    print('since 2+2=4 is always true dumbass')     -else if function in python. tries executing this when initial if case is false
+    
+else:
+    print('i mean, 2+2 is 4 tf you mean else')      -else function in python. executes code when if and else if case is false
+
+if (1+1==2) or (1+3 == 69):
+    print('aye')                                    -logic with or function. will still print even if one condition is false.
+
+if (1+1==2) and (1+3 == 69):
+    print('aye')                                    -logic with or function. will not print even if only one condition is false. 
+
+a = 1
+while a < 6                                         -while function in python. Loops a function until given condition is satisfied
+    a += 1
+
+b = list((1, 2, 3, 4, 5))                           -for loop function in python. It's like a for each loop in Java.  prints numbers
+for numbers in b:
+    print(numbers)
+
+for numbers in range(1, 5):     - another form of for loop. Same function as above, but notice the range() function.
+    print(numbers)                 range() function creates a list of number from the first parameter number to the last parameter number
+    
+    if (numbers == 3)           - added twist so that function breaks when numbers is only 3
+        break
+else:                           - you can also put else function after for loop in python, so that it will activate when the loop is finished.
+                                  this is useful if you want to catch a loop finishing when it's not supposed to because of break function.
+    
