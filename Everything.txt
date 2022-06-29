@@ -160,4 +160,34 @@ for numbers in range(1, 5):     - another form of for loop. Same function as abo
         break
 else:                           - you can also put else function after for loop in python, so that it will activate when the loop is finished.
                                   this is useful if you want to catch a loop finishing when it's not supposed to because of break function.
-    
+
+try:
+    var6 = int(input('input'))                              - Exception function in python. tries the function first in try:, and if something goes
+    print(var6)                                               wrong, instead of the default exception thrown by python, jumps to except:.
+
+
+except wrongDataType:                                       - In this example, if var6 value is anything else other than an integer, it will throw an error,
+    print('var6' value error. Must only be in integer)        but except will catch the error and instead prints a message. wrongDataType is the except name
+
+else:
+    print('function complete with no errors')               - Optional else statement when no errors are encountered
+
+
+
+var7 = open('Everything.txt', 'r')              - open function in python. opens a file and creates an object based on that file.
+                                                  First parameter is what the name of the file is, second parameter is what function to do with it.
+                                                  'r' parameter means "read", or simply look at its contents
+
+print(var7.readable())                          - .readable() returns boolean to check if the file is readable. returns true if yea (output is True)
+
+print(var7.readline())                          - .readline() returns the first text line of the file (I guess this is just for text-based files)
+print(var7.readlines())                         - .readlines() returns an array of all the text lines of the file
+print(var7.readlines()[0])                      - .readlines()[] returns the text line of the file with the specified index number
+
+var7.close()                                    - .close() function. Everytime open() function is used, there must always be a .close() function at the end
+
+var7 = open('Everything.txt', 'w')              - This time, second parameter is 'w', which means "write", or adding new lines in the file
+
+var7.write('Testt')                             - .write() function writes new lines in the text file.
+                                                  NOTE: if there's already something written in the text file (in this case, Everything.txt is this guide
+                                                  itself), and .write() function is used, This whole text file will be overwritten amd replaced with "Testt".
