@@ -191,3 +191,22 @@ var7 = open('Everything.txt', 'w')              - This time, second parameter is
 var7.write('Testt')                             - .write() function writes new lines in the text file.
                                                   NOTE: if there's already something written in the text file (in this case, Everything.txt is this guide
                                                   itself), and .write() function is used, This whole text file will be overwritten amd replaced with "Testt".
+
+
+class TestClass:                                - Class format in Python. creates a class object which you can use to assign to variables.
+    def __init__ (self, var8)                   - Constructor format in Python. Initializes Class variables with given parameters
+        self.var8
+    var9 = 2
+
+    pass                                       - uhh from what I've understood pass is just so that no errors show up in classes. Just put it here whatever
+
+var10 = TestClass(7)                           (var9 is now an object instance of TestClass and now has access to all of the class' variables)
+print(var10.var8)                              (will print 7)
+print(var10.var9)                              (will always print 2)
+
+
+from test import Test                      - Inheritance in Python. Assume there is another .py folder named "test.py", and within that file contains a
+                                             class named "Test", and in that class contains a variable "val11" with value of 1. By inheritance, you can 
+var12 = Test()                               import classes from another file and use that class to define variables
+print(var12.var11)                                  (prints 1)
+
